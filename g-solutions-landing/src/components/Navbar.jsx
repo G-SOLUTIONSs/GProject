@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,17 +10,23 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo + texto */}
         <div className="flex items-center gap-3">
-          <img src="./src/assets/logo.png" alt="Logo" className="w-10 h-10" />
-          <span className="text-red-700 font-bold text-xl">GSolutions</span>
+          <img src={logo} alt="Logo" className="w-10 h-10" />
+          <span className="text-red-700 font-bold text-xl"><a href="/#inicio">GSolutions</a></span>
         </div>
 
         {/* Menú Desktop */}
         <nav className="hidden md:flex space-x-6 text-gray-700 font-medium">
-          <a href="#whatis" className="hover:text-red-500 transition">¿Qué es?</a>
-          <a href="#pricing" className="hover:text-red-500 transition">Planes</a>
-          <a href="#how" className="hover:text-red-500 transition">¿Cómo funciona?</a>
-          <a href="#examples" className="hover:text-red-500 transition">Ejemplos</a>
-          <a href="#faq" className="hover:text-red-500 transition">Preguntas</a>
+          <a href="/#nosotros" className="hover:text-red-500 transition"onClick={() => setMenuOpen(false)}>¿Quienes somos?</a>
+          <a href="/#procesos" className="hover:text-red-500 transition"onClick={() => setMenuOpen(false)} > Nuestros Procesos</a>
+          <Link 
+  to="/proyectos-detallados" 
+  className="hover:text-red-500 transition"
+  onClick={() => setMenuOpen(false)}
+>
+  Proyectos
+</Link>
+          <a href="/#planes" className="hover:text-red-500 transition"onClick={() => setMenuOpen(false)} >Planes</a>
+          <a href="/#faq" className="hover:text-red-500 transition"onClick={() => setMenuOpen(false)} >Preguntas</a>
         </nav>
 
         {/* Botón hamburguesa móvil */}
@@ -44,11 +52,11 @@ const Navbar = () => {
       {/* Menú desplegable en móvil */}
       {menuOpen && (
         <nav className="md:hidden mt-2 px-6 flex flex-col gap-2 text-gray-700 font-medium">
-          <a href="#whatis" className="hover:text-red-500">¿Qué es?</a>
-          <a href="#pricing" className="hover:text-red-500">Planes</a>
-          <a href="#how" className="hover:text-red-500">¿Cómo funciona?</a>
-          <a href="#examples" className="hover:text-red-500">Ejemplos</a>
-          <a href="#faq" className="hover:text-red-500">Preguntas</a>
+          <a href="/#nosotros" className="hover:text-red-500 transition"onClick={() => setMenuOpen(false)}>¿Quienes somos?</a>
+          <a href="/#procesos" className="hover:text-red-500 transition"onClick={() => setMenuOpen(false)} > Nuestros Procesos</a>
+          <a href="/#proyectos" className="hover:text-red-500 transition"onClick={() => setMenuOpen(false)} > Proyectos </a>
+          <a href="/#planes" className="hover:text-red-500 transition"onClick={() => setMenuOpen(false)} >Planes</a>
+          <a href="/#faq" className="hover:text-red-500 transition"onClick={() => setMenuOpen(false)} >Preguntas</a>
         </nav>
       )}
     </header>

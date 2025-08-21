@@ -2,7 +2,7 @@ import React from "react";
 
 const Proceso = () => {
   return (
-    <section id="proceso" className="py-16 bg-gray-50">
+    <section id="procesos" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="inline-block px-3 py-1 text-sm font-semibold text-rojo_f bg-pink-100 rounded-full mb-4">

@@ -25,7 +25,7 @@ const Hero = () => {
                 Comenzar ahora
               </a>
               <a
-                href="#servicios"
+                href="/#planes"
                 className="px-8 py-3 border-2 border-white text-black rounded-lg font-semibold text-lg hover:bg-white hover:bg-opacity-10 transition-colors shadow-lg hover:shadow-xl text-center"
               >
                 Ver servicios

@@ -7,17 +7,23 @@ import Footer from './components/Footer'
 import Gallery from './components/Gallery'
 import Tecnologias from './sections/Tecnologias'
 import ContactSliders from './components/ContactSliders'
+import Proyectos from './sections/Proyectos'
+import Planes from './sections/Planes'
+import Faq from './sections/Faq';
 
 const App = () => {
   return (
     <div className="bg-gray-100 text-gray-900">
       <Navbar />
-      <ContactSliders/>
-      <Hero />
+      <ContactSliders/> 
+      <Hero/>
       <Nosotros/>
       <Tecnologias/>
       <Gallery/>
-      <Proceso />
+      <Proceso/>
+      <Proyectos/>
+      <Planes/>
+      <Faq/>
       <Footer />
     </div>
   )
